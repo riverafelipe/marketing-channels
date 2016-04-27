@@ -9,6 +9,12 @@
 import UIKit
 
 class FirstViewController: UIViewController {
+    
+    @IBOutlet var channelTextField: UITextField!
+    
+    @IBAction func addButton(sender: AnyObject) {
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
