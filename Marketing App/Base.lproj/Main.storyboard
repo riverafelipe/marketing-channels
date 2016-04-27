@@ -59,6 +59,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="channelTextField" destination="5ie-Ub-D36" id="VZk-sM-i6i"/>
+                        <outlet property="groupSizeTextField" destination="Tri-rp-WQV" id="Bbj-75-rw7"/>
                         <outlet property="invalidLabel" destination="2lu-Gz-WMG" id="MvF-8W-zOm"/>
                     </connections>
                 </viewController>

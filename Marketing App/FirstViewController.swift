@@ -22,10 +22,17 @@ class FirstViewController: UIViewController {
     
     @IBOutlet var channelTextField: UITextField!
     
+    @IBOutlet var groupSizeTextField: UITextField!
+    
+    
     @IBOutlet var invalidLabel: UILabel!
     
     
     @IBAction func addButton(sender: AnyObject) {
+        
+        // Converts the groupSizeTextField into an Int so that it could be added to the value of the cannelDatabase
+        
+        let groupSize = Int(groupSizeTextField.text!)!
         
         // Makes the Invalid Channel label disapear if a correct channel is inputed
         
@@ -43,27 +50,27 @@ class FirstViewController: UIViewController {
         
         if channelInput == "INSTAGRAM" {
             
-            channelDatabase["Instagram"]! += 1
+            channelDatabase["Instagram"]! += groupSize
             
         } else if channelInput == "GOOGLE" {
             
-            channelDatabase["Google"]! += 1
+            channelDatabase["Google"]! += groupSize
             
         } else if channelInput == "TRIPADVISOR" {
             
-            channelDatabase["Tripadvisor"]! += 1
+            channelDatabase["Tripadvisor"]! += groupSize
             
         } else if channelInput == "CONCIERGE" {
             
-            channelDatabase["Concierge"]! += 1
+            channelDatabase["Concierge"]! += groupSize
             
         } else if channelInput == "BOUCHER" {
             
-            channelDatabase["Boucher"]! += 1
+            channelDatabase["Boucher"]! += groupSize
             
         } else if channelInput == "OTHER" {
             
-            channelDatabase["Other"]! += 1
+            channelDatabase["Other"]! += groupSize
             
         } else {
             
@@ -76,6 +83,8 @@ class FirstViewController: UIViewController {
         // Makes the channelTextField blank after an input has been added
         
         channelTextField.text = ""
+        
+        groupSizeTextField.text = ""
         
         print(channelDatabase)
         
